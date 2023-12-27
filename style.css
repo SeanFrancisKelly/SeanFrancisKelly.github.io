@@ -1,45 +1,82 @@
-﻿/* Basic reset */
+/* Basic reset */
 body, h1, h2, h3, p {
     margin: 0;
     padding: 0;
 }
 
+/* Container for content to align it top center */
+.container {
+    width: 100%;
+    text-align: center; /* Center aligns the text */
+    padding-top: 10vh; /* Adjust as needed for top spacing */
+}
+
 /* Full-screen body with dark background */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
     background-color: #121212;
     color: white;
     font-family: 'Roboto', sans-serif;
-}
-
-.content {
-    text-align: center;
-    position: relative;
+    overflow: hidden;
 }
 
 /* Centered text with white glow */
 .centered-text {
     font-size: 72px;
     font-weight: 700;
-    color: white;
-    letter-spacing: 3px; /* Space out the letters a bit */
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff; /* White glow */
-    position: relative;
-    z-index: 2;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px #fff;
+    margin-bottom: 20px; /* Space between title and subtitle */
 }
 
-/* Coming soon text */
-.coming-soon {
-    font-size: 3vw; /* Scales with the viewport width */
-    position: absolute;
-    width: 100%;
-    top: 50%; /* Center vertically in the .content div */
-    left: 0;
-    transform: translateY(-50%);
-    opacity: 0.1; /* 10% opacity */
-    z-index: 1; /* Ensure it's behind the SFK text */
-    color: white; /* Text color */
-    font-weight: 400; /* Regular weight
+.subtitle {
+    font-size: 2vw;
+    opacity: 0.1;
+    margin-bottom: 40px; /* Space between subtitle and recent work */
+}
+
+/* Recent Work Section */
+.recent-work {
+    text-align: left; /* Aligns the text to the left within the container */
+    display: inline-block; /* Aligns the block to the center of the container */
+    max-width: 80%; /* Adjust as needed */
+    margin: auto;
+}
+
+.recent-work h3 {
+    font-size: 1.5em; /* Adjust as needed */
+    margin-bottom: 5px;
+}
+
+.recent-work hr {
+    border: 0.5px solid #ffffff50; /* Light white line */
+    margin-bottom: 20px; /* Space between line and link */
+}
+
+.recent-work a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Removes underline */
+    font-size: 1.2em; /* Adjust as needed */
+    display: block; /* Makes the link a block to add space below */
+    margin-bottom: 10px; /* Space between link and blurb */
+}
+
+.recent-work p {
+    font-size: 1em; /* Adjust as needed */
+    color: #ffffff90; /* Slightly less contrast for the blurb */
+}
+
+.recent-work .reddit-embed-bq {
+    max-width: 100%; /* Ensures the embed doesn't overflow the recent work container */
+    margin: 20px auto; /* Adds some space above and below the embed */
+}
+
+/* Hover effect for the centered text */
+.centered-text:hover {
+    text-shadow: 0 0 20px #fff;
+}
+
+/* Transition for smooth hover effect */
+.centered-text {
+    transition: all 0.3s ease;
+}
