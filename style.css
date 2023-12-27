@@ -57,7 +57,8 @@ nav {
     top: 0;
     z-index: 1000; /* Ensure it stays on top of other elements */
 }
-/* Improve responsiveness */
+
+/* Improve responsiveness 
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -67,7 +68,8 @@ nav {
     nav a {
         margin-bottom: 10px; /* Add space between links */
     }
-}
+}*/
+
 /* Subtle hover effect */
 nav a:hover {
     transition: color 0.3s ease-in-out;
