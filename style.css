@@ -1,60 +1,75 @@
-﻿/* Reset some basic elements */
-body, h1, h2, h3, p {
-    margin: 0;
-    padding: 0;
-}
-
-/* Apply a background color */
+﻿/* Updated color scheme */
 body {
-    font-family: 'Helvetica', sans-serif;
-    line-height: 1.6;
-    background-color: pink;
-    padding: 20px;
+    background-color: #fff; /* White background */
+    color: #333; /* Dark gray text */
 }
 
-/* Style the header */
-header {
-    background: #333;
-    color: #ffffff;
-    padding: 20px 0;
-    text-align: center;
+header, footer {
+    background: #f8f8f8; /* Light gray background */
+    color: #333; /* Dark gray text */
 }
 
-/* Style the navigation bar */
 nav {
-    display: flex;
-    justify-content: center;
-    background: #444;
-    padding: 10px 0;
+    background: #e7e7e7; /* Slightly darker gray */
 }
 
 nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
+    color: #333; /* Dark gray text */
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #007bff; /* Accent color for links (Choose your own) */
+}
+/* Apply font and typography adjustments */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.8;
 }
 
-/* Style each section */
+h1, h2, h3 {
+    font-weight: 300; /* Lighter font for headers */
+}
+
+nav a, footer {
+    font-weight: 400; /* Regular font weight for navigation and footer */
+}
+/* Adjust spacing and layout */
+header, footer {
+    padding: 40px 0; /* More padding for larger header and footer */
+}
+
 section {
-    padding: 20px 0;
-    margin: 20px 0;
+    padding: 60px 0; /* Increase section padding for more whitespace */
 }
 
-/* Style the footer */
-footer {
-    text-align: center;
-    padding: 30px 0;
-    background-color: #333;
-    color: white;
+nav {
+    padding: 15px 0; /* Adjust nav padding */
 }
 
-/* Add responsiveness */
+/* Ensure content doesn't touch the edges on smaller screens */
+body {
+    padding: 20px;
+}
+/* Sticky navigation bar */
+nav {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+}
+/* Improve responsiveness */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
+        padding: 20px 0;
     }
+
+    nav a {
+        margin-bottom: 10px; /* Add space between links */
+    }
+}
+/* Subtle hover effect */
+nav a:hover {
+    transition: color 0.3s ease-in-out;
+    color: #007bff; /* Accent color */
 }
