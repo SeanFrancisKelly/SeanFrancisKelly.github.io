@@ -1,0 +1,60 @@
+﻿/* Reset some basic elements */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color */
+body {
+    font-family: 'Helvetica', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Style the header */
+header {
+    background: #333;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Style the navigation bar */
+nav {
+    display: flex;
+    justify-content: center;
+    background: #444;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Style each section */
+section {
+    padding: 20px 0;
+    margin: 20px 0;
+}
+
+/* Style the footer */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #333;
+    color: white;
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+}
