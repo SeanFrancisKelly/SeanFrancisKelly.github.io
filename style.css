@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-    width: 80%; /* Adjust the width as needed */
+    width: 100%; /* Adjust the width as needed */
     margin: 0 auto; /* Center the container */
     padding-top: 5vh; /* Adjust as needed for top spacing */
     text-align: center; /* Center aligns the text */
@@ -22,16 +22,14 @@ body {
 .centered-text {
     font-size: 72px;
     font-weight: 700;
-    letter-spacing: 4px;
+    letter-spacing: 0px; /* Corrected from 'px' to '0px' */
     text-shadow: 0 0 10px #fff;
-    margin-top: 300px; /* Space between title and subtitle */
+    margin-top: 300px; /* Space from the top of the container */
 }
 
 .description {
     font-size: 13px; /* Fixed size for better control */
-    color: white;
     opacity: 0.85; /* Adjust as needed */
-    text-align: center;
     margin: 30px auto; /* Auto margins for horizontal centering */
     max-width: 600px; /* Match the width of the Reddit embed */
 }
@@ -41,30 +39,14 @@ body {
     display: inline-block;
     max-width: 600px;
     margin: 20px auto;
-    margin-top: 330px; /* Space between title and subtitle */
+    margin-top: 330px; /* Additional space from the previous content */
 }
 
-.recent-work p {
-    font-size: 1em; /* Fixed size for better control */
-    color: white;
-    opacity: 0.75; /* Adjust as needed */
-    text-align: left;
-    margin: 30px auto; /* Auto margins for horizontal centering */
-    max-width: 600px; /* Match the width of the Reddit embed */
-}
-
-.recent-work h2, h3 {
+.recent-work h2, .recent-work h3, .recent-work h4 {
     font-size: 1.5em;
     margin-bottom: 10px;
-}
-
-.recent-work h4 {
-    font-size: 21px;
     color: white;
     opacity: 0.85; /* Adjust as needed */
-    text-align: left;
-    margin: 30px auto; /* Auto margins for horizontal centering */
-    max-width: 600px; /* Match the width of the Reddit embed */
 }
 
 .recent-work hr {
@@ -76,7 +58,6 @@ body {
     color: #007bff;
     text-decoration: none;
     font-size: 1.3em;
-    display: block;
     margin-bottom: 10px;
 }
 
@@ -85,22 +66,18 @@ body {
     margin: 30px auto;
 }
 
- p {
+.recent-work p, .comment p {
     color: #d1d1d1; /* Lighter text color for better readability */
     font-size: 0.95em; /* Slightly smaller font size */
+    line-height: 1.5; /* Adjusted line height for readability */
+    text-align: left;
+    margin-bottom: 20px;
 }
 
 .comment {
     margin-left: auto; /* Center the comment block */
     margin-right: auto; /* Center the comment block */
-}
-
-.comment p {
-    font-size: 1em; /* Control the font size of the comment text */
-    color: #d1d1d1; /* Lighter text color for better readability */
-    line-height: 1; /* Adjust line height for readability */
-    text-align: left;
-    font-size: 1em; /* Slightly smaller font size */
+    margin-bottom: 10px; /* Space between comments */
 }
 
 .comment a {
@@ -109,7 +86,7 @@ body {
 }
 
 .comment strong {
-    font-size: 0.75em; /* Control the font size of the comment text */
+    font-size: 0.75em; /* Consistent font size for usernames */
     color: orange; /* Color for the username to make it stand out */
 }
 
@@ -125,7 +102,7 @@ body {
 
 /* Media query for small screens */
 @media (max-width: 600px) {
-    .description, .recent-work p {
+    .description, .recent-work p, .comment p {
         font-size: 14px; /* Slightly smaller text on narrow screens */
     }
 }
