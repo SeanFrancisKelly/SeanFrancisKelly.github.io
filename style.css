@@ -1,77 +1,33 @@
-﻿/* Updated color scheme */
+﻿/* Basic reset */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Dark theme styles */
 body {
-    background-color: #fff; /* White background */
-    color: #333; /* Dark gray text */
+    background-color: #121212; /* Very dark gray as background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    font-family: 'Helvetica', sans-serif;
 }
 
-header, footer {
-    background: #f8f8f8; /* Light gray background */
-    color: #333; /* Dark gray text */
+.logo-container {
+    /* Adjust as necessary to size your logo */
+    width: 300px; /* or whatever size you prefer */
+    height: auto;
+    text-align: center;
 }
 
-nav {
-    background: #e7e7e7; /* Slightly darker gray */
+.logo-container img {
+    width: 100%; /* Makes the image responsive */
+    height: auto;
+    display: block; /* Removes bottom space under image */
 }
 
-nav a {
-    color: #333; /* Dark gray text */
-}
-
-nav a:hover {
-    color: #007bff; /* Accent color for links (Choose your own) */
-}
-/* Apply font and typography adjustments */
+/* Remove default margins from body */
 body {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.8;
-}
-
-h1, h2, h3 {
-    font-weight: 300; /* Lighter font for headers */
-}
-
-nav a, footer {
-    font-weight: 400; /* Regular font weight for navigation and footer */
-}
-/* Adjust spacing and layout */
-header, footer {
-    padding: 40px 0; /* More padding for larger header and footer */
-}
-
-section {
-    padding: 60px 0; /* Increase section padding for more whitespace */
-}
-
-nav {
-    padding: 15px 0; /* Adjust nav padding */
-}
-
-/* Ensure content doesn't touch the edges on smaller screens */
-body {
-    padding: 20px;
-}
-/* Sticky navigation bar */
-nav {
-    position: -webkit-sticky; /* For Safari */
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* Ensure it stays on top of other elements */
-}
-
-/* Improve responsiveness 
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        padding: 20px 0;
-    }
-
-    nav a {
-        margin-bottom: 10px; /* Add space between links */
-    }
-}*/
-
-/* Subtle hover effect */
-nav a:hover {
-    transition: color 0.3s ease-in-out;
-    color: #007bff; /* Accent color */
+    margin: 0;
 }
