@@ -4,30 +4,22 @@ body, h1, h2, h3, p {
     padding: 0;
 }
 
-/* Dark theme styles */
+/* Full-screen body with dark background */
 body {
-    background-color: #121212; /* Very dark gray as background */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Full viewport height */
+    min-height: 100vh;
+    background-color: #121212;
+    color: white;
     font-family: 'Helvetica', sans-serif;
 }
 
-.logo-container {
-    /* Adjust as necessary to size your logo */
-    width: 300px; /* or whatever size you prefer */
-    height: auto;
+/* Centered text with glow effect */
+.centered-text {
+    font-size: 72px; /* Large text */
+    font-weight: bold;
     text-align: center;
-}
-
-.logo-container img {
-    width: 100%; /* Makes the image responsive */
-    height: auto;
-    display: block; /* Removes bottom space under image */
-}
-
-/* Remove default margins from body */
-body {
-    margin: 0;
+    color: white; /* Text color */
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #007bff, 0 0 40px #007bff, 0 0 50px #007bff, 0 0 60px #007bff, 0 0 70px #007bff; /* Glow effect */
 }
