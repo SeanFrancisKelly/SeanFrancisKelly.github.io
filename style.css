@@ -12,17 +12,34 @@ body {
     min-height: 100vh;
     background-color: #121212;
     color: white;
-    font-family: 'Arial Black', Gadget, sans-serif; /* A bolder typeface */
+    font-family: 'Roboto', sans-serif;
 }
 
-/* Centered text with reduced glow effect */
-.centered-text {
-    font-size: 72px; /* Large text */
-    font-weight: 700; /* Bold weight for Roboto */
+.content {
     text-align: center;
-    color: white; /* Text color */
-    font-family: 'Roboto', sans-serif; /* Roboto typeface */
-    text-shadow: 0 0 7.5px #fff, 0 0 15px #fff, 0 0 22.5px #007bff, 0 0 30px #007bff, 0 0 37.5px #007bff, 0 0 45px #007bff, 0 0 52.5px #007bff; /* Glow effect reduced by 25% */
+    position: relative;
 }
 
+/* Centered text with white glow */
+.centered-text {
+    font-size: 72px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 3px; /* Space out the letters a bit */
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff; /* White glow */
+    position: relative;
+    z-index: 2;
+}
 
+/* Coming soon text */
+.coming-soon {
+    font-size: 3vw; /* Scales with the viewport width */
+    position: absolute;
+    width: 100%;
+    top: 50%; /* Center vertically in the .content div */
+    left: 0;
+    transform: translateY(-50%);
+    opacity: 0.1; /* 10% opacity */
+    z-index: 1; /* Ensure it's behind the SFK text */
+    color: white; /* Text color */
+    font-weight: 400; /* Regular weight
