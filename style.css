@@ -12,14 +12,17 @@ body {
     min-height: 100vh;
     background-color: #121212;
     color: white;
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Arial Black', Gadget, sans-serif; /* A bolder typeface */
 }
 
-/* Centered text with glow effect */
+/* Centered text with reduced glow effect */
 .centered-text {
     font-size: 72px; /* Large text */
-    font-weight: bold;
+    font-weight: 700; /* Bold weight for Roboto */
     text-align: center;
     color: white; /* Text color */
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #007bff, 0 0 40px #007bff, 0 0 50px #007bff, 0 0 60px #007bff, 0 0 70px #007bff; /* Glow effect */
+    font-family: 'Roboto', sans-serif; /* Roboto typeface */
+    text-shadow: 0 0 7.5px #fff, 0 0 15px #fff, 0 0 22.5px #007bff, 0 0 30px #007bff, 0 0 37.5px #007bff, 0 0 45px #007bff, 0 0 52.5px #007bff; /* Glow effect reduced by 25% */
 }
+
+
