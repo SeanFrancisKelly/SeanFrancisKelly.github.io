@@ -1,165 +1,79 @@
 /* Basic reset */
-body, h1, h2, h3, p {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-@keyframes AnimatedGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    z-index: 2;
 }
 
-/* Full-screen body with dark background and enabled scrolling */
-body {
-    min-height: 100vh;
-    background-color: #121212;
+.brand-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
     color: white;
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(293deg, #0A0A0A, #0F0F0F, #161616, #1A1B1B);
-    background-size: 600% 600%;
-    animation: AnimatedGradient 8s ease infinite;
-  );
+    text-shadow: 0 0 10px rgba(255,255,255,0.7);
 }
 
-.container {
-    width: 100%;
-    margin: 0 auto;
-    padding-top: 5vh;
+.content-container {
+    background: linear-gradient(135deg, #070408, #11001c);
+    color: white;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    color: white;
     text-align: center;
 }
 
-.centered-text {
-    font-size: 72px;
-    font-weight: 700;
-    letter-spacing: 0px;
-    text-shadow: 0 0 10px #fff;
-    margin-top: 300px; /* Space from the top of the container */
-    position: relative; /* Required for absolute positioning of pseudo-elements */
-    display: inline-block; /* Required to fit the width to the content */
-    padding: 10px 20px; /* Adjust padding as needed */
-    perspective: 1000px; /* 3D space for children */
-    perspective-origin: 50% 50%; /* Center of the 3D space */
+.skills, .contact {
+    font-family: 'Montserrat', sans-serif;
+    width: 30%;
+    text-align: left;
 }
 
-/* Pseudo-elements for border animation */
-.centered-text::before,
-.centered-text::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: white;
-    transition: width 0.3s ease;
-}
-
-.centered-text::before {
-    top: 0;
-    left: 0;
-}
-
-.centered-text::after {
-    content: '';
-    position: absolute;
-    bottom: -10px; left: 0;
-    width: 100%; height: 2px;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
-    background-size: 200% 100%;
-    background-position: -100% 0;
-    transition: background-position 0.7s;
-}
-
-/* Hover effect: expand borders */
-.centered-text:hover::before {
-    width: 100%;
-}
-
-.centered-text:hover::after {
-    background-position: 100% 0;
-}
-
-/* Transition for smooth hover effect */
-.centered-text {
-    transition: all 0.3s ease;
-}
-
-.description {
-    font-size: 13px; /* Fixed size for better control */
-    opacity: 0.85; /* Adjust as needed */
-    margin: 30px auto; /* Auto margins for horizontal centering */
-    max-width: 600px; /* Match the width of the Reddit embed */
-    font-family: 'Roboto', sans-serif;
+.skills h2, .contact h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 .recent-work {
+    padding: 20px;
+    color: #fff;
+}
+
+.recent-work h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 40px;
     text-align: left;
-    display: inline-block;
-    max-width: 600px;
-    margin: 20px auto;
-    margin-top: 330px; /* Additional space from the previous content */
 }
 
-.recent-work h2, .recent-work h3, .recent-work h4 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: white;
-    opacity: 0.85; /* Adjust as needed */
+.work-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
 }
 
-.recent-work hr {
-    border: 0.5px solid #ffffff50;
-    margin-bottom: 20px;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        text-align: center;
+    }
 
-.recent-work a {
-    color: #007bff;
-    text-decoration: none;
-    font-size: 1.3em;
-    margin-bottom: 10px;
-}
-
-.recent-work .reddit-embed-bq {
-    max-width: 100%;
-    margin: 30px auto;
-}
-
-.recent-work p, .comment p {
-    color: #d1d1d1; /* Lighter text color for better readability */
-    font-size: 0.95em; /* Slightly smaller font size */
-    line-height: 1.5; /* Adjusted line height for readability */
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.comment {
-    margin-left: auto; /* Center the comment block */
-    margin-right: auto; /* Center the comment block */
-    margin-bottom: 10px; /* Space between comments */
-}
-
-.comment a {
-    color: #4b8eda; /* Color for the username to make it stand out */
-    text-decoration: none; /* Removes underline */
-}
-
-.comment strong {
-    font-size: 0.75em; /* Consistent font size for usernames */
-    color: orange; /* Color for the username to make it stand out */
-}
-
-/* Hover effect for the centered text */
-.centered-text:hover {
-    text-shadow: 0 0 20px #fff;
-}
-
-/* Transition for smooth hover effect */
-.centered-text {
-    transition: all 0.3s ease;
-}
-
-/* Media query for small screens */
-@media (max-width: 600px) {
-    .description, .recent-work p, .comment p {
-        font-size: 14px; /* Slightly smaller text on narrow screens */
+    .skills, .contact {
+        width: 80%;
+        margin: 10px 0;
     }
 }
